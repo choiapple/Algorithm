@@ -17,8 +17,6 @@ void solve(int arr2[9], int cnt){
             arr2[cnt] = i;
             visit[i] = 1;
             solve(arr2, cnt+1);
-            
-            solve(arr2, cnt);
             visit[i] = 0;
         }
     }
