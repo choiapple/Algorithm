@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 int main(){
-    int arr[5001] = {0, };
+    int arr[500001] = {0, };
     int n;
     cin>>n;
     long long tmp = 0;
