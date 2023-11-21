@@ -5,6 +5,9 @@ bool cmp(int a, int b){
     return a > b;
 }
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
     int N;
     int arr[100001] = {0, };
     cin>>N;
@@ -13,7 +16,6 @@ int main(){
     }
     sort(arr, arr+N, cmp);
     int answer = 1;
-    int tmp = 1;
     for(int i=0; i<N; i++){
         if(answer < arr[i] + i + 1){
             answer = arr[i] + i + 1;
