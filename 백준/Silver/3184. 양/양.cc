@@ -14,32 +14,24 @@ void bfs(int y, int x){
     visit[y][x] = 1;
     int o = 0;
     int v = 0;
-    if(map[y][x] == 'o'){
-        o++;
-    }else if(map[y][x] == 'v'){
-        v++;
-    }
     while(!q.empty()){
         int yy = q.front().first;
         int xx = q.front().second;
         q.pop();
+        if(map[yy][xx] == 'o'){
+            o++;
+        }else if(map[yy][xx] == 'v'){
+            v++;
+        }
         for(int i=0; i<4; i++){
             int tmpy = yy + dy[i];
             int tmpx = xx + dx[i];
             if(tmpy < R && tmpy >=0 && tmpx < C && tmpx >=0){
                 if(visit[tmpy][tmpx] == 0){
-                    if(map[tmpy][tmpx] == 'o'){
-                        visit[tmpy][tmpx] = 1;
-                        o++;
-                        q.push(make_pair(tmpy, tmpx));
-                    }else if(map[tmpy][tmpx] == 'v'){
-                        visit[tmpy][tmpx] = 1;
-                        v++;
-                        q.push(make_pair(tmpy, tmpx));
-                    }else if(map[tmpy][tmpx] == '.'){
-                        visit[tmpy][tmpx] = 1;
-                        q.push(make_pair(tmpy, tmpx));
-                    }
+                   if(map[tmpy][tmpx] != '#'){
+                       visit[tmpy][tmpx] = 1;
+                       q.push(make_pair(tmpy, tmpx));
+                   }
                 }
             }
         }
