@@ -23,15 +23,13 @@ int main(){
         }
     }
     vector<int> vc;
+    vector<int> vc2;
     for(int i=0; i<N; i++){
         if(visit2[i] == 0){
             vc.push_back(arr[i]);
         }
-    }
-    vector<int> vc2;
-    for(int i=1; i<=N; i++){
-        if(visit[i] == 0){
-            vc2.push_back(i);
+        if(visit[i+1] == 0){
+            vc2.push_back(i+1);
         }
     }
     long long answer = 0;
