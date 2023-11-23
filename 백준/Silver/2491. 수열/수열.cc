@@ -16,28 +16,24 @@ int main(){
         if(arr[i] >= arr[i-1]){
             tmp++;
         }else{
-            if(answer < tmp){
-                answer = tmp;
-            }
             tmp = 1;
         }
+        if(answer < tmp){
+                answer = tmp;
+         }
     }
-    if(answer < tmp){
-        answer = tmp;
-    }
+    
     tmp = 1;
     for(int i=N-1; i>0; i--){
         if(arr[i] <= arr[i-1]){
             tmp++;
         }else{
-            if(answer < tmp){
-                answer = tmp;
-            }
             tmp = 1;
         }
+        if(answer < tmp){
+                answer = tmp;
+         }
     }
-    if(answer < tmp){
-        answer = tmp;
-    }
+    
     cout<<answer<<"\n";
 }
