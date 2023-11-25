@@ -5,16 +5,7 @@ int main(){
     cin>>a1>>a0;
     cin>>c;
     cin>>n0;
-    int flag = 0;
-    for(int i=n0; i<=100; i++){
-        int tmp1 = a1*i + a0;
-        int tmp2 = c * i;
-        if(tmp1 > tmp2){
-            flag = 1;
-            break;
-        }
-    }
-    if(flag == 0){
+    if(a1 * n0 + a0 <= c * n0 && a1 <= c){
         cout<<1<<"\n";
     }else{
         cout<<0<<"\n";
