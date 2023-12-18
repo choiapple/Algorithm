@@ -36,8 +36,7 @@ public class Main {
         while(cheeseCnt != 0){
             time++;
             visited = new boolean[N+1][M+1];
-//            dfs(0, 0);
-            bfs();
+            dfs(0, 0);
             melting();
         }
         System.out.println(time);
@@ -64,42 +63,18 @@ public class Main {
             }
         }
     }
-//    static void dfs(int y, int x){
-//        visited[y][x] = true;
-//        map[y][x] = 2;
-//
-//        for(int i=0; i<4; i++){
-//            int ny = y + dy[i];
-//            int nx = x + dx[i];
-//
-//            if(nx < 0 || ny <0 || ny >= N || nx >= M) continue;
-//            if(visited[ny][nx] || map[ny][nx] == 1) continue;
-//
-//            dfs(ny, nx);
-//        }
-//    }
-    static void bfs(){
-        Queue<Area> q = new ArrayDeque<>();
-        q.add(new Area(0, 0));
-        visited[0][0] = true;
-        map[0][0] = 2;
-        
-        while(!q.isEmpty()){
-            int y = q.peek().y;
-            int x = q.peek().x;
-            q.poll();
-            
-            for(int i=0; i<4; i++){
-                int ny = y + dy[i];
-                int nx = x + dx[i];
-                
-                if(nx < 0 || ny < 0 || nx >= M || ny >= N) continue;
-                if(visited[ny][nx] || map[ny][nx] == 1) continue;
-                
-                map[ny][nx] = 2;
-                q.add(new Area(ny, nx));
-                visited[ny][nx] = true;
-            }
+    static void dfs(int y, int x){
+        visited[y][x] = true;
+        map[y][x] = 2;
+
+        for(int i=0; i<4; i++){
+            int ny = y + dy[i];
+            int nx = x + dx[i];
+
+            if(nx < 0 || ny <0 || ny >= N || nx >= M) continue;
+            if(visited[ny][nx] || map[ny][nx] == 1) continue;
+
+            dfs(ny, nx);
         }
     }
     static class Area{
