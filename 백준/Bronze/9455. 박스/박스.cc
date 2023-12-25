@@ -6,9 +6,9 @@ int main(){
     cout.tie(NULL);
     int T, m, n;
     cin>>T;
+    int arr[101][101] = {0, };
     for(int i=0; i<T; i++){
         cin>>m>>n;
-        int arr[101][101] = {0, };
         int answer = 0;
         for(int j=0; j<m; j++){
             for(int k=0; k<n; k++){
