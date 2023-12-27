@@ -3,10 +3,7 @@ using namespace std;
 int N;
 int answer = 214700000;
 void solv(int prin, int dong, int tmp){
-    if(answer < tmp){
-        return;
-    }
-    if(prin > N){
+    if(prin > N || answer <=tmp){
         return;
     }
     if(dong >= N){
