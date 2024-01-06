@@ -18,10 +18,7 @@ int main(){
         for(int j=0; j<N; j++){
             int flag1 = 0;
             if(i != j){
-                if(D > arr[j][0] && C >= arr[j][1]){
-                    flag1 = 1;
-                }
-                else if(C > arr[j][1] && D >= arr[j][0]){
+                if(D >= arr[j][0] && C >= arr[j][1]){
                     flag1 = 1;
                 }
             }
