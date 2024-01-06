@@ -18,7 +18,7 @@ int main(){
                 if(D > arr[j][0] && C >= arr[j][1]){
                     flag1 = 1;
                 }
-                if(C > arr[j][1] && D >= arr[j][0]){
+                else if(C > arr[j][1] && D >= arr[j][0]){
                     flag1 = 1;
                 }
             }
