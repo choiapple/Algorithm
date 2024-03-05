@@ -11,25 +11,22 @@ int main(){
     sort(arr, arr+C);
     int start = 0;
     int end = 0;
-    if(C == 0){
-        cout<<0<<"\n";
-    }else{
-        int answer = 0;
-        int tmp = arr[0];
-        while(end < C){
-            if(tmp < T){
-                end++;
-                tmp += arr[end];
-            }else{
-                tmp -= arr[start];
-                start++;
-            }
-            if(tmp <= T && end < C){
-                if(answer < end - start + 1){
-                    answer = end - start + 1;
-                }
+    int answer = 0;
+    int tmp = arr[0];
+    while(end < C){
+        if(tmp < T){
+            end++;
+            tmp += arr[end];
+        }else{
+            tmp -= arr[start];
+            start++;
+        }
+        if(tmp <= T && end < C){
+            if(answer < end - start + 1){
+                answer = end - start + 1;
             }
         }
-        cout<<answer<<"\n";
     }
+    cout<<answer<<"\n";
+
 }
