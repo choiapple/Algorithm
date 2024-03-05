@@ -13,12 +13,6 @@ int main(){
     int end = 0;
     if(C == 0){
         cout<<0<<"\n";
-    }else if(C == 1){
-        if(arr[0] <= T){
-            cout<<1<<"\n";
-        }else{
-            cout<<0<<"\n";
-        }
     }else{
         int answer = 0;
         int tmp = arr[0];
