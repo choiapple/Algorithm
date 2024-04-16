@@ -6,8 +6,7 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    string s;
-    string ts;
+    string s, ts;
     char c;
     int flag = 0;
     while(true){
