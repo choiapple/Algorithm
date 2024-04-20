@@ -12,7 +12,7 @@ int main(){
         cin>>arr[i];
     }
     for(int i=-99; i<100; i++){
-        int dp[100001] = {0, };
+        int dp[101] = {0, };
         for(int j=0; j<N; j++){
             if(arr[j] - i < 1 || arr[j] - i > 100){
                 dp[arr[j]] = 1;
