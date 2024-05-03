@@ -1,22 +1,21 @@
 #include <iostream>
-#include <sstream>
-#include <string>
-#include <vector>
 using namespace std;
 int main(){
-    string s;
-    getline(cin, s);
-    stringstream st;
-    st.str(s);
-    int n;
-    vector<int> vc;
-    while(st>>n){
-        vc.push_back(n);
-    }
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int N = 1000001;
+    int K;
     int answer = 0;
-    for(int i=1; i<vc.size(); i++){
-        if(vc[i-1] > vc[i]){
-            answer = 1;
+    while(cin>>K){
+        if(N == 1000001){
+            N = K;
+        }else{
+            if(N > K){
+                answer = 1;
+                break;
+            }
+            N = K;
         }
     }
     if(answer == 1){
