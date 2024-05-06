@@ -10,18 +10,8 @@ int main(){
         for(int j=1; j<len-i; j++){
             tmp *= 16;
         }
-        if(s[i] == 'A'){
-            answer += tmp*10;
-        }else if(s[i] == 'B'){
-            answer += tmp*11;
-        }else if(s[i] == 'C'){
-            answer += tmp*12;
-        }else if(s[i] == 'D'){
-            answer += tmp*13;
-        }else if(s[i] == 'E'){
-            answer += tmp*14;
-        }else if(s[i] == 'F'){
-            answer += tmp*15;
+        if(s[i] >= 'A'){
+            answer += tmp * (s[i] - 'A' + 10);
         }else{
             answer += tmp * (s[i] - '1' + 1);
         }
