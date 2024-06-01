@@ -12,7 +12,7 @@
 
 ### 제출 일자
 
-2024년 6월 1일 23:39:29
+2024년 6월 2일 08:15:22
 
 ### 문제 설명
 
@@ -22,7 +22,7 @@
 
 <p>아래 그림은 상근이의 방의 크기가 4×3일 때 이다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/4600f2e6-6349-4c85-b3c9-e6f3a8e3f79a/-/preview/" style="width: 122px; height: 94px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 122px; height: 94px;"></p>
 
 <p>어느 날 상근이네 방에 하근이가 놀러왔다. 하근이는 아름다운 타일 배치에 감동받았다. 다시 방으로 돌아온 하근이는 빨간색과 갈색 타일의 개수는 기억했지만, 방의 크기는 기억해내지 못했다.</p>
 
