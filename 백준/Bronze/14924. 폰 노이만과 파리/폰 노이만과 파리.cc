@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
-    double S, T, D, tmp;
+    int S, T, D;
     cin>>S>>T>>D;
-    tmp = D/(S * 2);
-    cout<<tmp * T<<"\n";
+    cout<<(D/(S * 2)) * T<<"\n";
 }
