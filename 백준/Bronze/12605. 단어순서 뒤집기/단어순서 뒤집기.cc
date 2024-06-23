@@ -13,7 +13,7 @@ int main(){
     for(int i=0; i<N; i++){
         getline(cin, s);
         j = 0;
-        string ss[100];
+        string ss[50];
         stringstream stream(s);
         while(stream>>sss){
             ss[j++] = sss;
