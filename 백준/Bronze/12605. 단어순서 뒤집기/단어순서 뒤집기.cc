@@ -7,13 +7,12 @@ int main(){
     cin.tie(NULL);
     cout.tie(NULL);
     int N, j;
-    string s, sss;
+    string s, ss[50], sss;
     cin>>N;
     cin.ignore();
     for(int i=0; i<N; i++){
         getline(cin, s);
         j = 0;
-        string ss[50];
         stringstream stream(s);
         while(stream>>sss){
             ss[j++] = sss;
