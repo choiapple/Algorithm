@@ -3,10 +3,11 @@ import java.io.*;
 
 public class Main {
 	static int R, C;
-	static char[][] map;
+	static char[][] map = new char[101][101];
 	static int[] dy = {0, -1, -1, -1, 0, 1, 1, 1};
 	static int[] dx = {-1, -1, 0, 1, 1, 1, 0, -1};
 	static StringTokenizer st;
+	static StringBuilder sb = new StringBuilder();
 	static String s;
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -15,7 +16,6 @@ public class Main {
 			R = Integer.parseInt(st.nextToken());
 			C = Integer.parseInt(st.nextToken());
 			if(R == 0 && C == 0) break;
-			map = new char[R][C];
 			for(int i=0; i<R; i++) {
 				s = br.readLine();
 				for(int j=0; j<C; j++) {
@@ -25,14 +25,15 @@ public class Main {
 			for(int i=0; i<R; i++) {
 				for(int j=0; j<C; j++) {
 					if(map[i][j] == '*') {
-						System.out.print('*');
+						sb.append('*');
 					}else {
-						System.out.print(check(i, j));
+						sb.append(check(i, j));
 					}
 				}
-				System.out.println();
+				sb.append('\n');
 			}
 		}
+		System.out.println(sb);
 	}
 	public static int check(int y, int x) {
 		int cnt = 0;
