@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
-int N, num[101] = {0, }, strike[101] = {0, }, ball[101] = {0, }, answer = 0;
-int visit[10] = {0, };
+int N, num[101] = {0, }, strike[101] = {0, }, ball[101] = {0, }, answer = 0, visit[10] = {0, };
 int check_strike(int a, int b){
     int cnt = 0;
     for(int i=0; i<3; i++){
