@@ -8,13 +8,12 @@ int main(){
     cin>>s;
     while(true){
         flag = 0;
-        len = s.length();
-        for(int i=0; i<len; i++){
-            if(s.substr(i, 3) == "PS4" || s.substr(i, 3) == "PS5"){
-                s = s.substr(0, i+2) + s.substr(i+3);
-                flag = 1;
-                break;
-            }
+        if(s.find("PS4") != std::string::npos){
+            s.replace(s.find("PS4"), 3, "PS");
+            flag = 1;
+        }else if(s.find("PS5") != std::string::npos){
+            s.replace(s.find("PS5"), 3, "PS");
+            flag = 1;
         }
         if(flag == 0){
             break;
