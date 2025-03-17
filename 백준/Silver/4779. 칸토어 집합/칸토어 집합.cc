@@ -2,11 +2,11 @@
 #include <cmath>
 using namespace std;
 void cantor(int n){
-    int size = pow(3, n-1);
     if(n == 0){
         cout<<"-";
         return;
     }
+    int size = pow(3, n-1);
     cantor(n - 1);
     for(int i=0; i<size; i++){
         cout<<" ";
