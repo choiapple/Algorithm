@@ -1,7 +1,5 @@
 #include <iostream>
 #include <set>
-#include <vector>
-#include <algorithm>
 using namespace std;
 int main(){
     ios_base::sync_with_stdio(false);
@@ -9,7 +7,6 @@ int main(){
     cout.tie(NULL);
     set<string> s;
     string color;
-    vector<string> vc;
     for(int i=0; i<4; i++){
         cin>>color;
         s.insert(color);
