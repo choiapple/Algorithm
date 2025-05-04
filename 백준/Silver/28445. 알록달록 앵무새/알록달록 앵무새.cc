@@ -15,12 +15,9 @@ int main(){
         s.insert(color);
     }
     for(auto iter=s.begin(); iter!=s.end(); iter++){
-        vc.push_back(*iter);
-    }
-    sort(vc.begin(), vc.end());
-    for(int i=0; i<vc.size(); i++){
-        for(int j=0; j<vc.size(); j++){
-            cout<<vc[i]<<" "<<vc[j]<<"\n";
+        for(auto iter2=s.begin(); iter2!=s.end(); iter2++){
+            cout<<*iter<<" "<<*iter2<<"\n";
         }
     }
+    
 }
