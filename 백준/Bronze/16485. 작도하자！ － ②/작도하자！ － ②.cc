@@ -3,13 +3,9 @@ using namespace std;
 int main(){
     double c, b, tmp;
     cin>>c>>b;
-    if(c > b){
-        tmp = c / b;
-    }else{
-        tmp = b / c;
-    }
+    tmp = c / b;
     cout<<fixed;
-    cout.precision(6);
+    cout.precision(7);
     cout<<tmp<<"\n";
     return 0;
 }
