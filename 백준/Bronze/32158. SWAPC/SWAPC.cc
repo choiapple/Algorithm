@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 int main(){
     int visit[101] = {0, };
@@ -14,9 +15,7 @@ int main(){
             if(visit[j] == 1) continue;
             if(st[j] != 'C' && st[j] != 'P') continue;
             if(st[i] != st[j]){
-                cp = st[i];
-                st[i] = st[j];
-                st[j] = cp;
+                swap(st[i], st[j]);
                 visit[i] = 1;
                 visit[j] = 1;
                 break;
