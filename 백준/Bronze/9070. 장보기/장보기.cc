@@ -16,7 +16,7 @@ int main(){
             tmp = C/W;
             if(min_n > tmp){
                 answer = C;
-                min_n = C/W;
+                min_n = tmp;
             }else if(min_n == tmp && answer > C){
                 answer = C;
             }
