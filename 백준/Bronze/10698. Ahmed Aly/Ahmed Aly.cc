@@ -10,18 +10,12 @@ int main(){
     for(int t=1; t<=T; t++){
         cin>>x>>pm>>y>>e>>z;
         cout<<"Case "<<t<<": ";
-        if(pm == '+'){
-            if(x + y == z){
-                cout<<"YES"<<"\n";
-            }else{
-                cout<<"NO"<<"\n";
-            }
+        if(pm == '+' && x + y == z){
+            cout<<"YES"<<"\n";
+        }else if(pm == '-' && x - y == z){
+            cout<<"YES"<<"\n";
         }else{
-            if(x - y == z){
-                cout<<"YES"<<"\n";
-            }else{
-                cout<<"NO"<<"\n";
-            }
+            cout<<"NO"<<"\n";
         }
     }
 }
