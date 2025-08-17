@@ -12,6 +12,6 @@ int main(){
     for(int i=0; i<len_s; i++){
         tmp_t += t;
     }
-    if(tmp_s == tmp_t) cout<<1<<"\n";
-    else cout<<0<<"\n";
+    cout<<(tmp_s == tmp_t)<<"\n";
+    return 0;
 }
