@@ -5,7 +5,7 @@ using namespace std;
 vector<int> router;
 int find_max_dist(int n, int c) {
     int l_dist = 0;
-    int r_dist = router[n-1]+1;
+    int r_dist = router[n-1];
     
     int result_dist;
     
