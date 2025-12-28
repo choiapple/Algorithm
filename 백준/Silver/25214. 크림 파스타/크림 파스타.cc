@@ -11,12 +11,8 @@ int main(){
     int mini = tmp, maxV = 0;
     for(int n=1; n<N; n++){
         cin>>tmp;
-        if(maxV < tmp - mini){
-            maxV = tmp - mini;
-            cout<<maxV<<" ";
-        }else{
-            cout<<maxV<<" ";
-        }
+        if(maxV < tmp - mini) maxV = tmp - mini;
+        cout<<maxV<<" ";
         if(mini > tmp) mini = tmp;
     }
 }
