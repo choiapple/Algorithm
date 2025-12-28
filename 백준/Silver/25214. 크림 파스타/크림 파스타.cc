@@ -4,21 +4,19 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    int N, arr[200001];
+    int N, tmp;
     cin>>N;
-    for(int n=0; n<N; n++){
-        cin>>arr[n];
-    }
-    int maxi = arr[0], mini = arr[0], m = arr[0];
-    for(int n=0; n<N; n++){
-        if(maxi < arr[n]) maxi = arr[n];
-        if(maxi - mini < arr[n] - m){
-            cout<<arr[n] - m<<" ";
-            maxi = arr[n];
-            mini = m;
+    cin>>tmp;
+    cout<<0<<" ";
+    int mini = tmp, maxV = 0;
+    for(int n=1; n<N; n++){
+        cin>>tmp;
+        if(maxV < tmp - mini){
+            maxV = tmp - mini;
+            cout<<maxV<<" ";
         }else{
-            cout<<maxi - mini<<" ";
+            cout<<maxV<<" ";
         }
-        if(m > arr[n]) m = arr[n];
+        if(mini > tmp) mini = tmp;
     }
 }
