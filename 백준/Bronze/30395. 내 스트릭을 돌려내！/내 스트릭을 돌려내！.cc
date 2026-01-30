@@ -8,8 +8,6 @@ int main(){
     cin>>N;
     for(int n=0; n<N; n++){
         cin>>arr[n];
-    }
-    for(int n=0; n<N; n++){
         if(arr[n] > 0) cur++;
         else if(n - f >= 2) f = n;
         else cur = 0;
